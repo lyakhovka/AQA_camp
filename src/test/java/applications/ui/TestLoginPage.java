@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.LandingPage;
 import pages.LoginPage;
-import providers.data.ConfProperties;
+import providers.data.ConfFromPropertiesProvider;
 
 import java.time.Duration;
 
@@ -23,11 +23,12 @@ public class TestLoginPage {
 
     @BeforeClass
     public static void setup() {
-        System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriver"));
+
+        System.setProperty("webdriver.chrome.driver", new ConfFromPropertiesProvider().getProperty("chromedriver"));
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.get(ConfProperties.getProperty("baseUrl"));
+        driver.get(new ConfFromPropertiesProvider().getProperty("baseUrl"));
 
         landingPage = new LandingPage(driver);
         loginPage = new LoginPage(driver);

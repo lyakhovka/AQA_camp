@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import providers.data.ConfProperties;
+import providers.data.ConfFromPropertiesProvider;
 
 public class LoginPage extends Page {
 
@@ -18,7 +18,7 @@ public class LoginPage extends Page {
     public boolean isOpened() {
 
         wait.until(ExpectedConditions.visibilityOf(header));
-        return header.getText().equals(ConfProperties.getProperty("LoginPageHeader"))
-                && driver.getTitle().equalsIgnoreCase(ConfProperties.getProperty("LoginPageHeader"));
+        return header.getText().equals(new ConfFromPropertiesProvider().getProperty("LoginPageHeader"))
+                && driver.getTitle().equalsIgnoreCase(new ConfFromPropertiesProvider().getProperty("LoginPageHeader"));
     }
 }

@@ -1,3 +1,5 @@
+//Please, ignore this class. It is out of 'config' homework scope.
+
 package pages;
 
 import org.openqa.selenium.WebDriver;

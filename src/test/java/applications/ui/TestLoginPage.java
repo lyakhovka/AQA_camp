@@ -1,3 +1,5 @@
+//Please, ignore this class. It is out or 'config' homework scope.
+
 package applications.ui;
 
 import org.junit.AfterClass;

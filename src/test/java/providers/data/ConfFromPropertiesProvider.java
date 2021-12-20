@@ -5,10 +5,10 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfFromPropertiesProvider implements ConfigProvider{
+    //This provider is to read properties from .properties files
+
     protected static FileInputStream configFile;
     public static Properties PROPERTIES;
-
-   // private String confPath = "src/test/resources/" + System.getenv().get("TARGET");
 
     static {
         try {

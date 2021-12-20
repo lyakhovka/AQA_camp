@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Properties;
 
 public class ConfFromEnvironmentProvider implements ConfigProvider{
+//This provider is to read properties from environment variables
 
     public static Properties PROPERTIES;
     static {

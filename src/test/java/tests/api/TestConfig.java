@@ -1,4 +1,4 @@
-package applications.api;
+package tests.api;
 
 import config.Config;
 import org.junit.Test;

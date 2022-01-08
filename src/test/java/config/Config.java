@@ -13,9 +13,11 @@ public class Config extends BaseConfig {
         super();
 
         //Register all parameters we need for test run
-        this.register("LOGIN_PAGE_HEADER");
-        this.register("DEMO_VAR");
-        this.register("PATH");
+        this.register("ENDPOINT_LOGIN");
+        this.register("ENDPOINT_DASHBOARD");
+        this.register("BASE_URL");
+        this.register("EMAIL");
+        this.register("PASSWORD");
 
         //Define the providers priorities (analogue of 'Hierarchical provider' from the lecture
         //Registered parameters will ask their values from providers in the order providers are listed here.

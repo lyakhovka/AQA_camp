@@ -1,4 +1,5 @@
 //Please, ignore this class. It is out of 'config' homework scope.
+//Please, ignore this class. It is out of 'ApiClient' homework scope.
 
 package pages;
 

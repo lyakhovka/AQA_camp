@@ -15,6 +15,7 @@ public class TestWebApi {
 
     @Test
     public void testWebApi() {
+//this test just verifies WebApiClient viability
 
         System.out.println("DASHBOARD ITEMS: " + webApi.getDashboardItems().getBody().asString());
     }

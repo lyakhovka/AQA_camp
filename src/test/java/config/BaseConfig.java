@@ -24,7 +24,9 @@ public abstract class BaseConfig {
             if (!this.registered.containsKey(key)) {
                 System.out.println(key + ": The variable is not registered");
             }
-            return registeredValue;
+            else System.out.println("Value for " + key + "key is not found!");
+
+            return null;
         }
     }
 

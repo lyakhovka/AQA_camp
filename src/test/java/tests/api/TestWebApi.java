@@ -16,8 +16,6 @@ public class TestWebApi {
     @Test
     public void testWebApi() {
 
-        System.out.println("TEST TARGET: " + System.getenv().get("TARGET"));
-
         System.out.println("DASHBOARD ITEMS: " + webApi.getDashboardItems().getBody().asString());
     }
 

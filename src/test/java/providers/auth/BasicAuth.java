@@ -12,10 +12,11 @@ public class BasicAuth implements Auth {
     @Override
     public HttpSession login(User user) {
 
-        String loginUrl = Config.getInstance().getRegisteredValue("BASE_URL").toString()
-        +Config.getInstance().getRegisteredValue("ENDPOINT_LOGIN").toString();
+       String loginUrl = Config.getInstance().getRegisteredValue("BASE_URL").toString()
+                + Config.getInstance().getRegisteredValue("ENDPOINT_LOGIN").toString()
+                + "?expires=" + Config.getInstance().getRegisteredValue("TOKENEXPIRES");
 
-        System.out.println(loginUrl);
+       System.out.println("LOGGING INTO: " + loginUrl);
 
        Response response = given().auth()
                 .preemptive()
@@ -30,8 +31,8 @@ public class BasicAuth implements Auth {
        String auth_token = response.path("jwt").toString();
        String expires = response.path("expires").toString();
 
-        System.out.println(auth_token);
-        System.out.println(expires);
+       System.out.println("AUTH TOKEN: " + auth_token);
+       System.out.println("AUTH TOKEN EXPIRES AT: " + expires);
 
        return HttpSession.getInstance().setToken(auth_token).setExpires(expires);
 

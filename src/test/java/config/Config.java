@@ -13,13 +13,17 @@ public class Config extends BaseConfig {
     private Config() {
         super();
 
-        //Register all parameters we need for test run
+        //Register all parameters we need for WebApiClient test run
         this.register("ENDPOINT_LOGIN");
         this.register("ENDPOINT_DASHBOARD");
         this.register("BASE_URL");
         this.register("EMAIL");
         this.register("PASSWORD");
         this.register("TOKENEXPIRES");
+
+        //Register parameters we need for TestConfig test run
+        this.register("SOMETHING");
+        this.register("PATH");
 
         target = System.getenv().get("TARGET");
         if (target==null) target="prod";

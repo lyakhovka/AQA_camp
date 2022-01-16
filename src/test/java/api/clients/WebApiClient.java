@@ -17,4 +17,10 @@ public WebApiClient(HttpSession session){
 
       return session.get(dashboardUrl);
     }
+
+  public void logout(){
+ //TODO
+      System.out.println("Logged out");
+
+  }
 }

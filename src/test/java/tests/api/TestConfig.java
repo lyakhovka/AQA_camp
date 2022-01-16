@@ -2,9 +2,13 @@ package tests.api;
 
 import config.Config;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import testSuits.categories.P1Tests;
+
 
 public class TestConfig {
 
+    @Category(P1Tests.class)
     @Test
     public void testConfig() {
 

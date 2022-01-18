@@ -20,6 +20,9 @@ public class Config extends BaseConfig {
         this.register("EMAIL");
         this.register("PASSWORD");
         this.register("TOKENEXPIRES");
+        this.register("CHROMEDRIVER");
+        this.register("SIRIUSURL");
+        this.register("LOGINPAGEHEADER");
 
         //Register parameters we need for TestConfig test run
         this.register("SOMETHING");

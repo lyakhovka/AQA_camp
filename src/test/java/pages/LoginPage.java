@@ -1,12 +1,10 @@
-//Please, ignore this class. It is out of 'config' homework scope.
-
 package pages;
 
+import config.Config;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import providers.data.ConfFromPropertiesProvider;
 
 public class LoginPage extends Page {
 
@@ -19,8 +17,9 @@ public class LoginPage extends Page {
 
     public boolean isOpened() {
 
+        String loginPageHeader = Config.getInstance().getRegisteredValue("LOGINPAGEHEADER").toString();
         wait.until(ExpectedConditions.visibilityOf(header));
-        return header.getText().equals(new ConfFromPropertiesProvider().getProperty("LoginPageHeader"))
-                && driver.getTitle().equalsIgnoreCase(new ConfFromPropertiesProvider().getProperty("LoginPageHeader"));
+
+        return header.getText().equals(loginPageHeader) && driver.getTitle().equalsIgnoreCase(loginPageHeader);
     }
 }

@@ -10,9 +10,9 @@ public class ConfFromPropertiesProvider implements ConfigProvider{
     protected static FileInputStream configFile;
     public static Properties PROPERTIES;
 
-    static {
+    public ConfFromPropertiesProvider(String target){
         try {
-            configFile = new FileInputStream("src/test/resources/" + System.getenv().get("TARGET") + ".properties");
+            configFile = new FileInputStream("src/test/resources/" + target + ".properties");
             PROPERTIES = new Properties();
             PROPERTIES.load(configFile);
         } catch (IOException e) {
@@ -23,7 +23,8 @@ public class ConfFromPropertiesProvider implements ConfigProvider{
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
+
+    }
 
     }
 

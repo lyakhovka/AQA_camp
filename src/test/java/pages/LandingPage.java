@@ -13,7 +13,7 @@ public class LandingPage extends Page {
     @FindBy(xpath = ".//div//a[text()='Login']")
     private WebElement loginBtn;
 
-    public void openLogin() {
+    public void openLoginPage() {
         loginBtn.click();
     }
 }
